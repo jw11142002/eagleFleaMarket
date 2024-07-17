@@ -1,0 +1,53 @@
+<view class="topBar">
+  <view>
+    <view class="catagory">
+      <view class="catRow" style="flex-direction:row;">
+        <view class="all {{active === 1 ? 'item-active' : ''}}" bindtap="allClick">All</view>
+        <view class="sports {{active === 2 ? 'item-active' : ''}}" bindtap="sportsClick">Sports</view>
+        <view class="books {{active === 3 ? 'item-active' : ''}}" bindtap="booksClick">Books</view>
+        <view class="appliance {{active === 4 ? 'item-active' : ''}}" bindtap="applianceClick">Appliance</view>
+        <view class="household {{active === 5 ? 'item-active' : ''}}" bindtap="householdClick">Household</view>
+      </view>
+      <view class="catRow" style="flex-direction:row;">
+        <view class="clothes {{active === 6 ? 'item-active' : ''}}" bindtap="clothesClick">Clothes</view>
+        <view class="footwear {{active === 7 ? 'item-active' : ''}}" bindtap="footwearClick">Footwear</view>
+        <view class="electronics {{active === 8 ? 'item-active' : ''}}" bindtap="electronicsClick">Electronics</view>
+        <view class="hobby {{active === 9 ? 'item-active' : ''}}" bindtap="hobbyClick">Hobby</view>
+      </view>
+    </view>
+  </view>
+</view> <!--End of topBar-->
+
+
+
+<view class="list">
+    <swiper style="margin-left: 50rpx; margin-top: 20rpx; height: 400rpx;"
+      indicator-dots="true" autoplay="true" circular="true">
+      <swiper-item>
+        <image src='/images/ads/costco.jpg' bindtap="costcoClick"></image>
+      </swiper-item>
+      <swiper-item>
+        <image src='/images/ads/puresmile.jpg' bindtap="puresmileClick"></image>
+      </swiper-item>
+      <swiper-item>
+        <image src='/images/ads/nydental.jpg' bindtap="nydentalClick"></image>
+      </swiper-item>
+      <swiper-item>
+        <image src='/images/ads/lanhai.jpg' bindtap="lanhaiClick"></image>
+      </swiper-item>
+    </swiper>
+
+  <view wx:for="{{posts}}" wx:key="id">
+    <navigator url="/pages/itemDetails/itemDetails?id={{item._id}}" class="card-body">
+      <image src="{{item.itemImageIds[0]}}" class="item-picture"></image>
+      <view class="card-right">
+        <view class="item-title">{{item.itemName}}</view>
+        <view class="item-price">¥{{item.itemPrice}}</view>
+        <view class="flex-container">
+          <view class="flex-child item-seller">{{item.itemSellerNickname}}</view>
+          <view class="flex-child item-date">{{item.itemDateString}}</view>
+        </view>
+      </view>
+    </navigator>
+  </view>
+</view>

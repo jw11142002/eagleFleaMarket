@@ -1,0 +1,28 @@
+<!--pages/itemDetails/itemDetails.wxml-->
+
+<view>
+    <view class="header">
+        <view><text class="title">{{item.itemName}}</text></view>
+        <view><text class="price">¥{{item.itemPrice}}</text></view>
+        <view><text class="contact">Contact Information: {{item.itemContact}}</text></view>
+    </view>
+
+    <view>
+        <swiper indicator-dots="true" class="image">
+            <swiper-item wx:for="{{item.itemImageIds}}">
+                <image mode="aspectFit" class="image" src='{{item}}'></image>
+            </swiper-item>
+        </swiper>
+    </view>
+    <view class="description">
+        <text>{{item.itemDescription}}</text>
+    </view>
+    <view class="yesno">
+        <block wx:if="{{user}}">
+            <button class="editDelete">
+                <navigator url="/pages/itemEdit/itemEdit?id={{item._id}}">Edit</navigator>
+            </button>
+            <button bindtap="deletePost" class="editDelete">Delete</button>
+        </block>
+    </view>
+</view>

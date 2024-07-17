@@ -1,0 +1,7 @@
+{
+    "usingComponents" : {
+        "popupwindow": "/popupwindow/popupwindow"
+    },
+    "openId": "OPENID",
+    "nickName": "NICKNAME"
+}

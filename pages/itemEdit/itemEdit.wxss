@@ -1,0 +1,111 @@
+/* pages/sell/sell.wxss */
+@import '/lib/weui.wxss';
+
+textarea {
+  width: 700rpx;
+  padding: 25rpx 0;
+}
+
+.formBackground {
+  border-style: solid;
+  margin-left: 25rpx;
+  margin-right: 25rpx;
+  border-width: 2rpx;
+  border-radius: 10rpx;
+}
+
+.textarea-wrp {
+  padding: 0 25rpx;
+  background-color: rgb(233, 232, 232);
+}
+
+.checkbox {
+  display: grid;
+  grid-template-columns: 355rpx 395rpx;
+  margin-left: 20rpx;
+  margin-top: 10rpx;
+}
+
+.page-section{
+  width: 100%;
+  margin-bottom: 30rpx;
+}
+
+.page-section:last-child{
+  margin-bottom: 0;
+}
+
+.page-section-title{
+  font-size: 35rpx;
+  font-weight: bold;
+  color: rgb(114, 114, 201);
+  margin-top: 10rpx;
+  margin-bottom: 5rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+}
+
+.images {
+  display: grid;
+
+  margin-right: 25rpx;
+  margin-left: 25rpx;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 20vw);
+}
+.gallery__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-style: solid;
+  border-width: 2rpx;
+}
+
+.yes-no {
+  position: relative;
+  bottom: 0;
+}
+
+.confirm {
+  display: inline-block;
+  background-color: white;
+  color: red;
+}
+
+.publish_imgs_area{
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  border-radius: 15rpx;
+  margin: 20rpx;
+  padding-left: 8rpx;
+  padding-top: 8rpx;
+  padding-bottom: 8rpx;
+  /* height: 450rpx; */
+}
+
+.iamge_item {
+  width: 225rpx;
+  height: 225rpx;
+  padding: 4rpx;
+}
+
+.iamge_content{
+  width: 223rpx;
+  height: 223rpx;
+  border-radius: 15rpx;
+  border: 1px solid #f1efef;
+}
+
+.iamge_cancel{
+  width:40rpx;
+  height:40rpx;
+  border-radius:50%;
+  position:relative;
+  top:-259rpx;
+  right:-204rpx;
+  z-index:800;
+}
+

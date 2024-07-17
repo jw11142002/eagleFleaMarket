@@ -1,0 +1,43 @@
+{
+    "pages": [
+        "pages/home/home",
+        "pages/myItems/myItems",
+        "pages/sell/sell",
+        "pages/itemDetails/itemDetails",
+        "pages/itemEdit/itemEdit",
+        "custom-tab-bar/index",
+        "popupwindow/popupwindow"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#131921",
+        "navigationBarTitleText": "SAS Marketplace",
+        "navigationBarTextStyle": "white",
+        "enablePullDownRefresh": true
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json",
+    "tabBar": {
+        "custom": true,
+        "list": [
+            {
+                "text": "home",
+                "pagePath": "pages/home/home",
+                "iconPath": "images/tab_icons/home_icon.png",
+                "selectedIconPath": "images/tab_icons/home_icon.png"
+            },
+            {
+                "text": "Sell",
+                "pagePath": "pages/sell/sell",
+                "iconPath": "images/tab_icons/sell_icon.png",
+                "selectedIconPath": "images/tab_icons/sell_icon.png"
+            },
+            {
+                "text": "My Items",
+                "pagePath": "pages/myItems/myItems",
+                "iconPath": "images/tab_icons/my_items_icon.png",
+                "selectedIconPath": "images/tab_icons/my_items_icon.png"
+            }
+        ]
+    }
+}

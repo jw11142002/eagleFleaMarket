@@ -1,0 +1,84 @@
+<!--pages/sell/sell.wxml-->
+
+<view class="page">
+
+<popupwindow wx:if="{{!LoggedIn}}" titleString="" contentString="In order to sell your item, your WeChat ID is \nneeded so that a buyer can contact you \nthrough WeChat. \n\nYour information will not be used in any other way." contentHeight="350" bindclose="closeClick" outClickCanClose="false">
+</popupwindow>
+
+<form bindsubmit="submitPost">
+<view class="page-body">
+  <view class="page-section">
+    <view class="page-section-title">Item Title:</view>
+    <input name="itemName" class="formBackground" value="{{item.itemName}}"></input>
+  </view>
+
+  <view class="page-section">
+    <view class="page-section-title">Contact Info:</view>
+    <input name="itemContact" class="formBackground" value="{{item.itemName}}" placeholder="Your Phone Number or WeChat ID"></input>
+  </view>
+
+  <view class="page-section">
+    <view class="page-section-title">Price (RMB):</view>
+    <input name="itemPrice" class="formBackground" type="number" value="{{item.itemPrice}}"></input>
+  </view>
+
+  <view class="page-section">
+    <view class="page-section-title">Catagory:</view>
+    <radio-group name="itemCatagory" class="checkbox" bindchange="itemCatagory">
+        <label wx:for="{{itemCheck}}"></label>
+      <label><radio value="Sports" checked="{{itemCheck[0]}}"/>Sports</label>
+      <label><radio value="Books" checked="{{itemCheck[1]}}"/>Books</label>
+      <label><radio value="Appliance" checked="{{itemCheck[2]}}"/>Appliance</label>
+      <label><radio value="Furniture" checked="{{itemCheck[3]}}"/>Furniture</label>
+      <label><radio value="Clothes" checked="{{itemCheck[4]}}"/>Clothes</label>
+      <label><radio value="Footwear" checked="{{itemCheck[5]}}"/>Footwear</label>
+      <label><radio value="Electronics" checked="{{itemCheck[6]}}"/>Electronics</label>
+      <label><radio value="Hobby" checked="{{itemCheck[7]}}"/>Hobby</label>
+    </radio-group>
+  </view>
+
+  <view class="page-section">
+    <view class="page-section-title">Description:</view>
+    <textarea name="itemDescription" class="formBackground" maxlength="-1" style="height: 4em" value="{{item.itemDescription}}"></textarea>
+  </view>
+
+  <view class="publish_imgs_area">
+    <!-- Image -->
+    <view class="imgs_area" wx:for="{{fileIds}}" wx:key="*this">
+      <view class="iamge_item">
+        <image 
+          class="iamge_content" 
+          src="{{item}}" 
+          data-id="{{index}}"
+          mode="aspectFill" 
+          bindtap="previewIamge"
+        />
+        <image 
+          class="iamge_cancel" 
+          src="/images/minus.png" 
+          mode="aspectFill" 
+          data-id="{{index}}"
+          bindtap="deleteImage"
+        />
+      </view>
+    </view>
+    
+    <!-- Add Picture Button -->
+    <view class="imgs_area" bindtap="chooseImage" wx:if="{{fileIds.length < 9}}">
+      <view class="iamge_item">
+        <image class="iamge_content" src="/images/add.png" mode="aspectFill" />
+      </view>
+    </view>
+  </view>
+
+
+
+
+
+  <view class="yes-no">
+    <button class="confirm" bindtap="tapCancel" form-type="{{type}}" >Cancel</button>
+    <button class="confirm" form-type="submit">Confirm</button>
+  </view>
+</view>
+</form>
+</view>

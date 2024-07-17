@@ -1,0 +1,21 @@
+<!--pages/myItems/myItems.wxml-->
+<!--<wxs module="util" src="../../util.wxs"></wxs>-->
+
+<scroll-view class="list">
+  <text class="title">My Items</text>
+
+  <view wx:for="{{posts}}" wx:key="id">
+    <navigator url="/pages/itemDetails/itemDetails?id={{item._id}}" class="card-body">
+      <image src="{{item.itemImageIds[0]}}" class="item-picture"></image>
+      <view class="card-right">
+        <view class="item-title">{{item.itemName}}</view>
+        <view class="item-price">¥{{item.itemPrice}}</view>
+        <view class="flex-container">
+          <view class="flex-child item-seller"></view>
+          <view class="flex-child item-date">{{item.itemDateString}}</view>
+        </view>
+      </view>
+    </navigator>
+  </view>
+
+</scroll-view>

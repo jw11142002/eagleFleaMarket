@@ -1,0 +1,87 @@
+.topBar {
+  background-color: rgb(65, 88, 107);
+}
+
+.catagory {
+  text-align: center;
+  height: 110rpx;
+  color: rgb(204, 204, 204);
+  padding: 10rpx;
+  
+}
+.catRow {
+  display: flex;
+  margin-top: 10rpx;
+}
+
+
+.all {
+  width: 50rpx;
+}
+.sports {
+  width: 125rpx
+}
+.books {
+  width: 120rpx;
+}
+.appliance {
+  width: 180rpx;
+}
+.household {
+  width: 170rpx;
+}
+.clothes {
+  width: 140rpx;
+}
+.footwear {
+  width: 150rpx;
+}
+.electronics {
+  width: 190rpx;
+}
+.hobby {
+  width: 110rpx;
+}
+
+.card-body {
+  width: 750rpx;
+  height: 250rpx;
+}
+.item-picture {
+  display: inline-block;
+  width: 200rpx;
+  height: 200rpx; 
+  border-radius: 10rpx;
+  margin: 30rpx;
+  
+}
+.card-right {
+  position: relative;
+  display: inline-block;
+  top: -55rpx;
+}
+.item-title {
+  font-weight: 500;
+  font-size: 35rpx;
+}
+.item-price {
+  position: relative;
+  top: 50rpx;
+  font-weight: bold;
+  color: red;
+}
+.flex-container {
+  display: flex;
+  margin-top: 60rpx;
+}
+.flex-child {
+  width: 200rpx;
+  font-size: 25rpx;
+}
+.list {
+  padding-bottom: 130rpx;
+  padding-left: 200rpx;
+}
+.item-active {
+  color: orange;
+}

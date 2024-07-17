@@ -1,0 +1,9 @@
+
+<view class="i-modal-mask {{ visible ? 'i-modal-mask-show' : '' }}" catchtap='outClick'>
+  <view class='centerView'>
+    <view class='titleText'>{{titleString}}</view>
+    <textarea wx:if="{{visible}}" class='contentText' style='height: {{contentHeight > 0 && contentHeight <= 700 ? contentHeight:700}}rpx;' value='{{contentString}}' maxlength="-1" disabled="true" fixed="true"></textarea>
+    <button open-type="getUserInfo" class="login" bindgetuserinfo="onGetUserInfo">Authorize Here</button>
+  </view>
+  
+</view>
